@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_measurements"
+        android:icon="@drawable/ic_book"
+        android:title="@string/measurements"
+        />
+    <item
+        android:id="@+id/menu_frequency"
+        android:icon="@drawable/ic_calendar"
+        android:title="@string/frequency"
+        />
+    <item
+        android:id="@+id/menu_training"
+        android:icon="@drawable/ic_halter"
+        android:title="@string/workout"
+        />
+    <item
+        android:id="@+id/menu_discovery"
+        android:icon="@drawable/ic_home"
+        android:title="@string/discovery"
+        />
+    <item
+        android:id="@+id/menu_profile"
+        android:icon="@drawable/ic_person"
+        android:title="@string/profile"
+        />
+
+</menu>

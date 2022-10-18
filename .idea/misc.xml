@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/ic_circle.xml" value="0.2035" />
+        <entry key="app/src/main/res/drawable/ic_play.xml" value="0.2035" />
+        <entry key="app/src/main/res/drawable/ic_play_circle.xml" value="0.2035" />
+        <entry key="app/src/main/res/drawable/style_border.xml" value="0.3255" />
+        <entry key="app/src/main/res/drawable/training_edit_text_style.xml" value="0.2035" />
+        <entry key="app/src/main/res/drawable/training_view_style.xml" value="0.2035" />
+        <entry key="app/src/main/res/layout/activity_cadastro_adm.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_cadastro_aluno.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/activity_cadastro_aluno2.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/activity_choose_account.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/activity_first_body_measurements.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_login_adm.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_login_aluno.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.67" />
+        <entry key="app/src/main/res/layout/activity_register_adm.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_register_choose_account.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/activity_register_first_measurements.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/activity_register_student.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/activity_teste_email.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/button_loading.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/edit_training_rv.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/fragment_adm_profile.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/fragment_adm_profile_student.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/fragment_adm_search_student.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/fragment_adm_student_trainings.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/fragment_change_password.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/fragment_discovery.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/fragment_edit_training.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_exercise_info.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/fragment_frequency.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/fragment_frequency_history.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/fragment_measurement.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/fragment_measurement_update.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_my_data.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/fragment_new_training.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_performing_exercises.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/fragment_profile_adm.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/fragment_profile_change_password.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/fragment_profile_my_data.xml" value="0.2675925925925926" />
+        <entry key="app/src/main/res/layout/fragment_search_student.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/fragment_training.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_training_edit_exercises.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/fragment_training_exercise_info.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/fragment_training_history.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/fragment_training_new_workout.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/fragment_training_performing_workout.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/fragment_training_workouts.xml" value="0.2675925925925926" />
+        <entry key="app/src/main/res/layout/fragment_trainings.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/fragment_update_measurements.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/loading_button.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/measurement_main_item_rv.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/performing_exercise_rv.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/search_student_rv.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/training_history_rv.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/training_main_item_rv.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/trainings_main_item_rv.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.3229166666666667" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
