@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:paddingTop="10dp"
     android:background="@color/white"
-    tools:context=".ChooseAccountActivity">
+    >
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
@@ -32,7 +32,7 @@
         app:srcCompat="@drawable/icon_olimpik" />
 
     <Button
-        android:id="@+id/btnSouAluno"
+        android:id="@+id/register_btn_am_aluno"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
@@ -45,7 +45,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/btnSouAdm"
+        android:id="@+id/register_btn_am_adm"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
@@ -55,13 +55,14 @@
         android:textColor="@color/text_color"
         app:layout_constraintEnd_toStartOf="@id/guideline3"
         app:layout_constraintStart_toStartOf="@id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/btnSouAluno" />
+        app:layout_constraintTop_toBottomOf="@+id/register_btn_am_aluno" />
     <Button
         android:id="@+id/btnTurnBack"
         style="@style/button_common"
         android:text="@string/btn_turn_back"
         android:layout_width="100dp"
         android:padding="12dp"
+        android:layout_margin="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         />

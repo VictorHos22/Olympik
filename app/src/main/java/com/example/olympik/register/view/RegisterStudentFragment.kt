@@ -1,72 +1,70 @@
-package com.example.olympik.registerStudent.view
+package com.example.olympik.register.view
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Context
 import android.os.Bundle
+import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import android.widget.Toast
-import com.example.olympik.FirstBodyMeasurementsActivity
-import com.example.olympik.ChooseAccountActivity
+import androidx.fragment.app.Fragment
 import com.example.olympik.R
 import com.example.olympik.common.base.DependencyInjector
 import com.example.olympik.common.util.TxtWatcher
-import com.example.olympik.main.MainActivity
-import com.example.olympik.registerStudent.RegisterStudent
-import com.example.olympik.registerStudent.presentation.RegisterStudentPresenter
-import kotlinx.android.synthetic.main.activity_register_student.*
+import com.example.olympik.register.RegisterStudent
+import com.example.olympik.register.presentation.RegisterStudentPresenter
+import kotlinx.android.synthetic.main.fragment_register_student.*
 
-
-class RegisterStudentActivity : AppCompatActivity(), RegisterStudent.View {
+class   RegisterStudentFragment : Fragment(R.layout.fragment_register_student), RegisterStudent.View{
+    private var fragmentAttachListener : FragmentAttachListener? = null
 
     override lateinit var presenter: RegisterStudent.Presenter
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_register_student)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         val repository = DependencyInjector.registerStudentRepository()
         presenter = RegisterStudentPresenter(this, repository)
 
         register_student_btn_register.setOnClickListener {
             presenter.create(
-                register_student_full_name.toString(),
+                register_student_full_name.text.toString(),
                 register_student_spinner_sex.toString(),
-                register_student_birth_date.toString(),
-                register_student_cpf.toString(),
-                register_student_phone_number.toString(),
-                register_student_email.toString(),
-                register_student_password.toString(),
-                register_student_repassword.toString()
-                )
+                register_student_birth_date.text.toString(),
+                register_student_cpf.text.toString(),
+                register_student_phone_number.text.toString(),
+                register_student_email.text.toString(),
+                register_student_password.text.toString(),
+                register_student_repassword.text.toString()
+            )
         }
 
         register_student_full_name.addTextChangedListener(watcher)
+        register_student_birth_date.addTextChangedListener(watcher)
+        register_student_cpf.addTextChangedListener(watcher)
+        register_student_phone_number.addTextChangedListener(watcher)
+        register_student_email.addTextChangedListener(watcher)
+        register_student_password.addTextChangedListener(watcher)
+        register_student_repassword.addTextChangedListener(watcher)
+
         register_student_full_name.addTextChangedListener(TxtWatcher{
             displayNameFailure(null)
         })
         //falta spinner
-        register_student_birth_date.addTextChangedListener(watcher)
         register_student_birth_date.addTextChangedListener(TxtWatcher{
             displayBirthDateFailure(null)
         })
-        register_student_cpf.addTextChangedListener(watcher)
         register_student_cpf.addTextChangedListener(TxtWatcher{
             displayCpfFailure(null)
         })
-        register_student_phone_number.addTextChangedListener(watcher)
         register_student_phone_number.addTextChangedListener(TxtWatcher{
-            displayPhoneNumber(null)
+            displayPhoneNumberFailure(null)
         })
-        register_student_email.addTextChangedListener(watcher)
         register_student_email.addTextChangedListener(TxtWatcher{
             displayEmailFailure(null)
         })
-        register_student_password.addTextChangedListener(watcher)
         register_student_password.addTextChangedListener(TxtWatcher{
             displayPasswordFailure(null)
         })
-        register_student_repassword.addTextChangedListener(watcher)
         register_student_repassword.addTextChangedListener(TxtWatcher{
             displayRePasswordFailure(null)
         })
@@ -74,7 +72,7 @@ class RegisterStudentActivity : AppCompatActivity(), RegisterStudent.View {
         val spinner: Spinner = register_student_spinner_sex
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter.createFromResource(
-            this,
+            requireContext(),
             R.array.sex_array,
             android.R.layout.simple_spinner_item
         ).also { adapter ->
@@ -82,6 +80,13 @@ class RegisterStudentActivity : AppCompatActivity(), RegisterStudent.View {
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             // Apply the adapter to the spinner
             spinner.adapter = adapter
+        }
+    }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        if(context is FragmentAttachListener){
+            fragmentAttachListener = context
         }
     }
 
@@ -105,7 +110,7 @@ class RegisterStudentActivity : AppCompatActivity(), RegisterStudent.View {
         register_student_edit_input_cpf.error = cpfError?.let { getString(it) }
     }
 
-    override fun displayPhoneNumber(phoneNumberError: Int?) {
+    override fun displayPhoneNumberFailure(phoneNumberError: Int?) {
         register_student_edit_input_phone_number.error = phoneNumberError?.let { getString(it) }
     }
 
@@ -122,34 +127,26 @@ class RegisterStudentActivity : AppCompatActivity(), RegisterStudent.View {
     }
 
     override fun onCreateSuccess() {
-        goToMainScreen()
+        fragmentAttachListener?.goToRegisterFirstMeasurements()
     }
 
     override fun onCreateFailure(message: String) {
-        Toast.makeText(this, message, Toast.LENGTH_LONG).show()
-    }
-
-    private fun goToMainScreen(){
-        val intent = Intent(this, MainActivity::class.java)
-        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-        startActivity(intent)
+        Toast.makeText(requireContext(), message, Toast.LENGTH_LONG).show()
     }
 
     private val watcher = TxtWatcher{
         register_student_btn_register.isEnabled = register_student_full_name.text.toString().isNotEmpty()
-                //falta spinner
-                && register_student_birth_date.text.toString().isNotEmpty()
-                && register_student_cpf.text.toString().isNotEmpty()
-                && register_student_phone_number.text.toString().isNotEmpty()
-                && register_student_email.text.toString().isNotEmpty()
-                && register_student_password.text.toString().isNotEmpty()
-                && register_student_repassword.text.toString().isNotEmpty()
+            //falta spinner
+            && register_student_birth_date.text.toString().isNotEmpty()
+            && register_student_cpf.text.toString().isNotEmpty()
+            && register_student_phone_number.text.toString().isNotEmpty()
+            && register_student_email.text.toString().isNotEmpty()
+            && register_student_password.text.toString().isNotEmpty()
+            && register_student_repassword.text.toString().isNotEmpty()
     }
 
     override fun onDestroy() {
         presenter.onDestroy()
         super.onDestroy()
     }
-
-
 }

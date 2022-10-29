@@ -1,4 +1,4 @@
-package com.example.olympik.registerStudent
+package com.example.olympik.register
 
 import com.example.olympik.common.base.BasePresenter
 import com.example.olympik.common.base.BaseView
@@ -14,7 +14,7 @@ interface RegisterStudent {
         fun displaySexFailure(sexError: Int?)
         fun displayBirthDateFailure(birthError: Int?)
         fun displayCpfFailure(cpfError: Int?)
-        fun displayPhoneNumber(phoneNumberError: Int?)
+        fun displayPhoneNumberFailure(phoneNumberError: Int?)
         fun displayEmailFailure(emailError: Int?)
         fun displayPasswordFailure(passwordError: Int?)
         fun displayRePasswordFailure(rePasswordError: Int?)

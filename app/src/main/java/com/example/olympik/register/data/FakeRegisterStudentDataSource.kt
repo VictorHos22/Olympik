@@ -1,4 +1,4 @@
-package com.example.olympik.registerStudent.data
+package com.example.olympik.register.data
 
 import android.os.Handler
 import android.os.Looper
@@ -9,7 +9,7 @@ import java.util.*
 class FakeRegisterStudentDataSource : RegisterStudentDataSource{
 
     override fun create(name: String, sex: String, birthDate: String, cpf: String, phoneNumber: String,
-        email: String, password: String, callback: RegisterStudentCallback) {
+        email: String, password: String, callback: RegisterCallback) {
         Handler(Looper.getMainLooper()).postDelayed({
             val userAuth = Database.usersAuth.firstOrNull { email == it.email }
 

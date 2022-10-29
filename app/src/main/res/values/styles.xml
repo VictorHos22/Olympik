@@ -53,7 +53,7 @@
         <item name="android:inputType">number</item>
     </style>
 
-    <style name="button_login" parent="Widget.MaterialComponents.Button">
+    <style name="button_loading" parent="Widget.MaterialComponents.Button">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/text_color</item>

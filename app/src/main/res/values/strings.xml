@@ -10,7 +10,7 @@
     <string name="password">Senha</string>
     <string name="hint_password">Digite a sua senha</string>
     <string name="access">Acessar</string>
-    <string name="hint_cnpj">Digite o seu CNPJ</string>
+    <string name="hint_cnpj">Digite o seu CNPJ(somente números)</string>
     <string name="dont_have_register">Ainda não tem uma conta?</string>
     <string name="btn_sign_up">Cadastrar</string>
     <string name="register_gym">Cadastrar Academia</string>
@@ -18,8 +18,8 @@
     <string name="email">Email</string>
     <string name="birth_date">Data de nascimento</string>
     <string name="full_name">Nome Completo</string>
-    <string name="cpf">CPF</string>
-    <string name="phone_number">Telefone</string>
+    <string name="hint_cpf">CPF(somente números)</string>
+    <string name="hint_phone_number">Telefone(somente números)</string>
     <string name="business_name">Nome Empresarial</string>
     <string name="cnpj">CNPJ</string>
     <string name="fantasy_name">Nome fantasia</string>
@@ -92,4 +92,12 @@
     <string name="invalid_cpf">CPF inválido</string>
     <string name="invalid_phone">Insira o número de telefone com DDD</string>
     <string name="invalid_confirm">Senha e confirmar a senha devem ser iguais</string>
+    <string name="invalid_cnpj">CNPJ inválido</string>
+    <string name="invalid_business_name">Nome inválido</string>
+    <string name="invalid_fantasy_name">Nome inválido</string>
+    <string name="invalid_cep">CEP inválido</string>
+    <string name="invalid_address">Endereço inválido</string>
+    <string name="invalid_state">Selecione um estado</string>
+    <string name="invalid_city">Selecione uma cidade</string>
+    <string name="invalid_measurement">Campo obrigatório</string>
 </resources>

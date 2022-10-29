@@ -1,12 +1,10 @@
-package com.example.olympik.registerStudent.presentation
-
+package com.example.olympik.register.presentation
 
 import android.util.Patterns
 import com.example.olympik.R
-import com.example.olympik.registerStudent.RegisterStudent
-import com.example.olympik.registerStudent.data.RegisterStudentCallback
-import com.example.olympik.registerStudent.data.RegisterStudentRepository
-import java.util.*
+import com.example.olympik.register.RegisterStudent
+import com.example.olympik.register.data.RegisterCallback
+import com.example.olympik.register.data.RegisterStudentRepository
 
 class RegisterStudentPresenter(
     private var view: RegisterStudent.View?,
@@ -18,8 +16,8 @@ class RegisterStudentPresenter(
         val isNameValid = name.length >= 10
         val isSexValid = sex != "Sexo"
         val isBirthDateValid = birthDate.toString().isNotEmpty()
-        val isCpfValid = cpf.length >= 11
-        val isPhoneNumberValid = phoneNumber.length >= 10
+        val isCpfValid = cpf.length == 11
+        val isPhoneNumberValid = phoneNumber.length == 11
         val isEmailValid = Patterns.EMAIL_ADDRESS.matcher(email).matches()
         val isPasswordValid = password.length >=6
         val isConfirmValid = password == confirmPass
@@ -49,9 +47,9 @@ class RegisterStudentPresenter(
         }
 
         if (!isPhoneNumberValid){
-            view?.displayPhoneNumber(R.string.invalid_phone)
+            view?.displayPhoneNumberFailure(R.string.invalid_phone)
         } else {
-            view?.displayPhoneNumber(null)
+            view?.displayPhoneNumberFailure(null)
         }
 
         if(!isEmailValid){
@@ -74,9 +72,9 @@ class RegisterStudentPresenter(
         if (isNameValid && isSexValid && isBirthDateValid && isCpfValid && isPhoneNumberValid &&
             isEmailValid && isPasswordValid && isConfirmValid){
 
-                view?.showProgress(true)
+            view?.showProgress(true)
 
-            repository.create(name, sex, birthDate, cpf, phoneNumber, email, password, object: RegisterStudentCallback{
+            repository.create(name, sex, birthDate, cpf, phoneNumber, email, password, object: RegisterCallback {
                 override fun onSuccess() {
                     view?.onCreateSuccess()
                 }
@@ -88,19 +86,11 @@ class RegisterStudentPresenter(
                 override fun onComplete() {
                     view?.showProgress(false)
                 }
-
             })
         }
-
-
-
     }
-
-
 
     override fun onDestroy() {
         view = null
     }
-
-
 }

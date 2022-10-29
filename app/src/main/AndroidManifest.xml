@@ -10,16 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Olympik">
         <activity
+            android:name=".register.view.RegisterActivity"
+            android:exported="false" />
+        <activity
             android:name=".registerStudent.view.TesteEmail"
-            android:exported="false">
-
-        </activity>
+            android:exported="false"></activity>
         <activity
             android:name=".splash.view.SplashActivity"
             android:exported="false" />
         <activity
             android:name=".main.MainActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".FirstBodyMeasurementsActivity"
             android:exported="false" />

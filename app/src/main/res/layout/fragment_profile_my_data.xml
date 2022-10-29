@@ -59,7 +59,7 @@
 
         <TextView
             style="@style/textView.profile"
-            android:text="@string/phone_number" />
+            android:text="@string/hint_phone_number" />
 
         <EditText style="@style/editText" />
     </LinearLayout>

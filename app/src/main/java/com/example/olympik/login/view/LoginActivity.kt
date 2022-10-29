@@ -4,13 +4,14 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.olympik.ChooseAccountActivity
 import com.example.olympik.main.MainActivity
 import com.example.olympik.R
 import com.example.olympik.common.base.DependencyInjector
 import com.example.olympik.common.util.TxtWatcher
 import com.example.olympik.login.Login
 import com.example.olympik.login.presentation.LoginPresenter
+import com.example.olympik.register.view.RegisterActivity
+import com.example.olympik.register.view.RegisterChooseAccountFragment
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity(), Login.View {
@@ -40,7 +41,7 @@ class LoginActivity : AppCompatActivity(), Login.View {
         }
     }
     private fun goToChooseAccount(){
-        intent = Intent(this, ChooseAccountActivity::class.java)
+        intent = Intent(this, RegisterActivity::class.java)
         startActivity(intent)
     }
 
