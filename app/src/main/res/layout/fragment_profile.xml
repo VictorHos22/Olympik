@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/white">
     <TextView
-        android:id="@+id/training_txt_new_training"
+        android:id="@+id/profile_txt_my_profile"
         style="@style/textViewTitle"
         android:paddingTop="8dp"
         android:text="@string/my_profile"
@@ -21,15 +21,17 @@
         android:background="@color/gray_darker"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/training_txt_new_training" />
+        app:layout_constraintTop_toBottomOf="@id/profile_txt_my_profile" />
+
     <ImageView
-        android:id="@+id/btn_edit_training"
+        android:id="@+id/profile_btn_options"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_margin="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:src="@drawable/ic_more"/>
+
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/img_profile_user"
         android:layout_width="100dp"
@@ -41,20 +43,21 @@
         app:layout_constraintTop_toBottomOf="@id/view_bottom_training_title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
+
     <TextView
-        android:id="@+id/txt_name_user"
+        android:id="@+id/profile_user_name"
         style="@style/textView"
         android:text="@string/user_name"
         app:layout_constraintTop_toBottomOf="@id/img_profile_user"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintEnd_toEndOf="parent"/>
+
     <View
         android:id="@+id/view_bottom_img_profile"
         style="@style/line"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt_name_user" />
+        app:layout_constraintTop_toBottomOf="@id/profile_user_name" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -65,18 +68,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:orientation="vertical">
+
         <TextView
             style="@style/textView.profile"
             android:background="@drawable/style_border"
             android:text="@string/my_data"/>
-        <TextView
-            style="@style/textView.profile"
-            android:background="@drawable/style_border"
-            android:text="@string/my_adress"/>
+
         <TextView
             style="@style/textView.profile"
             android:background="@drawable/style_border"
             android:text="@string/change_password"/>
-    </LinearLayout>
 
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

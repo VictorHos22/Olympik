@@ -84,4 +84,23 @@
 <!--Nao consegui alterar o tamanho da fonte        -->
         <item name="android:textSize">24sp</item>
     </style>
+    <style name="circleImageView">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="civ_border_width">1dp</item>
+        <item name="civ_border_color">@color/blue</item>
+    </style>
+    <style name="img_arrow_left">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:src">@drawable/ic_arrow_left</item>
+    </style>
+    <style name="fab">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">end|bottom</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginBottom">72dp</item>
+    </style>
 </resources>
