@@ -101,4 +101,5 @@
     <string name="invalid_city">Selecione uma cidade</string>
     <string name="invalid_measurement">Campo obrigatório</string>
     <string name="students">Alunos</string>
+    <string name="update_measurements">Atualizar medidas</string>
 </resources>

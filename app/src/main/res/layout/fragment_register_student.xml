@@ -43,7 +43,6 @@
                     style="@style/editText"
                     android:layout_marginBottom="0dp"
                     android:hint="@string/full_name"/>
-
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -55,14 +54,12 @@
                     android:layout_marginBottom="0dp"
                     android:id="@+id/register_student_spinner_sex"
                     style="@style/spinner" />
-
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/register_student_edit_input_birth_date"
                 style="@style/editTextInput"
                 android:layout_marginBottom="0dp">
-
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/register_student_birth_date"
                     style="@style/editText"
@@ -82,7 +79,6 @@
                     android:layout_marginBottom="0dp"
                     android:hint="@string/hint_cpf"
                     android:inputType="number" />
-
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -95,7 +91,6 @@
                     android:layout_marginBottom="0dp"
                     android:hint="@string/hint_phone_number"
                     android:inputType="number" />
-
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -107,7 +102,6 @@
                     style="@style/editText"
                     android:layout_marginBottom="0dp"
                     android:hint="@string/email" />
-
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -121,7 +115,6 @@
                     android:layout_marginBottom="0dp"
                     android:hint="@string/password"
                     android:inputType="textPassword"/>
-
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -134,9 +127,7 @@
                     android:layout_marginBottom="0dp"
                     android:hint="@string/re_password"
                     android:inputType="textPassword"/>
-
             </com.google.android.material.textfield.TextInputLayout>
-
 
             <com.example.olympik.common.view.LoadingButton
                 android:id="@+id/register_student_btn_register"
@@ -150,9 +141,7 @@
                 android:id="@+id/register_student_btn_turn_login"
                 style="@style/button_common"
                 android:text="@string/btn_turn_back"
-                android:layout_marginStart="16dp"
-                />
-
+                android:layout_marginStart="16dp" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

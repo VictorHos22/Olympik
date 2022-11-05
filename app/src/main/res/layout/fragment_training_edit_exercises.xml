@@ -7,25 +7,23 @@
     android:background="@color/white">
 
     <ImageView
-        android:src="@drawable/ic_arrow_left"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_margin="2dp"
+        android:id="@+id/training_edit_btn_back"
+        style="@style/img_arrow_left"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
     <TextView
         style="@style/textViewTitle"
         android:text="@string/name_training"
-        android:id="@+id/training_txt_training"
+        android:id="@+id/training_txt_title"
         android:paddingTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
-        android:id="@+id/view_bottom_training_title"
+        android:id="@+id/view_line"
         style="@style/line"
-        app:layout_constraintTop_toBottomOf="@id/training_txt_training"
+        app:layout_constraintTop_toBottomOf="@id/training_txt_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -37,10 +35,10 @@
         android:layout_margin="5dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view_bottom_training_title" />
+        app:layout_constraintTop_toBottomOf="@id/view_line" />
 
     <View
-        android:id="@+id/view_bottom_txt_exercise"
+        android:id="@+id/view_line2"
         style="@style/line"
         app:layout_constraintTop_toBottomOf="@id/training_txt_exercises"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,21 +48,16 @@
         android:id="@+id/rv_edit_training"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/view_bottom_txt_exercise"
+        app:layout_constraintTop_toBottomOf="@id/view_line2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:listitem="@layout/edit_training_rv" />
+        tools:listitem="@layout/exercises_rv" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end|bottom"
+        android:id="@+id/training_edit_add_btn_fab"
+        style="@style/fab"
         android:src="@drawable/ic_add"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:contentDescription="@null"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="72dp" />
-
+        android:contentDescription="@null"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

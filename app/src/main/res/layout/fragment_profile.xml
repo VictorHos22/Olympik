@@ -14,33 +14,24 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
-        android:id="@+id/view_bottom_training_title"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="10dp"
-        android:background="@color/gray_darker"
+        android:id="@+id/view_line"
+        style="@style/line"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/profile_txt_my_profile" />
 
     <ImageView
         android:id="@+id/profile_btn_options"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_margin="5dp"
+        style="@style/img_more_options"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/ic_more"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/img_profile_user"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:id="@+id/profile_img_profile"
+        style="@style/circleImageView"
         android:layout_marginTop="50dp"
         android:src="@drawable/ic_person"
-        app:civ_border_width="1dp"
-        app:civ_border_color="@color/blue"
-        app:layout_constraintTop_toBottomOf="@id/view_bottom_training_title"
+        app:layout_constraintTop_toBottomOf="@id/view_line"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
@@ -48,12 +39,12 @@
         android:id="@+id/profile_user_name"
         style="@style/textView"
         android:text="@string/user_name"
-        app:layout_constraintTop_toBottomOf="@id/img_profile_user"
+        app:layout_constraintTop_toBottomOf="@id/profile_img_profile"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <View
-        android:id="@+id/view_bottom_img_profile"
+        android:id="@+id/view_line2"
         style="@style/line"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,20 +55,21 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="50dp"
-        app:layout_constraintTop_toBottomOf="@id/view_bottom_img_profile"
+        app:layout_constraintTop_toBottomOf="@id/view_line2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/profile_my_data"
             style="@style/textView.profile"
             android:background="@drawable/style_border"
             android:text="@string/my_data"/>
 
         <TextView
+            android:id="@+id/profile_change_pass"
             style="@style/textView.profile"
             android:background="@drawable/style_border"
             android:text="@string/change_password"/>
-
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

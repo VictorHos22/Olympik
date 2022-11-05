@@ -173,7 +173,6 @@
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
         <TextView
             android:id="@+id/register_m_btn_next"
             style="@style/textView"
@@ -195,7 +194,7 @@
             app:text="@string/insert"/>
 
         <Button
-            android:id="@+id/btnTurnBack"
+            android:id="@+id/first_measurements_btn_back"
             style="@style/button_common"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -204,6 +203,5 @@
             android:padding="12dp"
             android:layout_marginBottom="16dp"
             android:text="@string/btn_turn_back" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

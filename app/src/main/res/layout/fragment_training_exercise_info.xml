@@ -6,25 +6,23 @@
     android:background="@color/white">
 
     <ImageView
-        android:src="@drawable/ic_arrow_left"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_margin="2dp"
+        android:id="@+id/exercise_btn_back"
+        style="@style/img_arrow_left"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
     <TextView
         style="@style/textViewTitle"
         android:text="@string/name_exercise"
-        android:id="@+id/training_txt_training"
+        android:id="@+id/exercise_name_txt_title"
         android:paddingTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
-        android:id="@+id/view_bottom_training_title"
+        android:id="@+id/view_line"
         style="@style/line"
-        app:layout_constraintTop_toBottomOf="@id/training_txt_training"
+        app:layout_constraintTop_toBottomOf="@id/exercise_name_txt_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -33,7 +31,7 @@
         android:src="@drawable/rosca_alternada"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/view_bottom_training_title"
+        app:layout_constraintTop_toBottomOf="@id/view_line"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
     <TextView
@@ -45,5 +43,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

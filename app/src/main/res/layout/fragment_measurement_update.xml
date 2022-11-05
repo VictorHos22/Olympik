@@ -7,28 +7,26 @@
     android:background="@color/white">
 
     <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_margin="2dp"
+        style="@style/img_arrow_left"
         android:src="@drawable/ic_arrow_left"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/training_txt_measurement"
+        android:id="@+id/measurement_update_title"
         style="@style/textViewTitle"
         android:paddingTop="8dp"
-        android:text="@string/measurements"
+        android:text="@string/update_measurements"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
-        android:id="@+id/view_bottom_training_title"
+        android:id="@+id/view_line"
         style="@style/line"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/training_txt_measurement" />
+        app:layout_constraintTop_toBottomOf="@id/measurement_update_title" />
 
     <LinearLayout
         android:id="@+id/ln_main"
@@ -38,62 +36,126 @@
         android:paddingStart="20dp"
         android:paddingTop="10dp"
         android:paddingEnd="20dp"
-        app:layout_constraintTop_toBottomOf="@id/view_bottom_training_title"
+        app:layout_constraintTop_toBottomOf="@id/view_line"
         tools:context=".FirstBodyMeasurementsActivity">
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/measurements_weight_input"
+            style="@style/editTextInput"
+            android:layout_marginBottom="0dp">
 
-        <EditText
-            style="@style/editTextNumbers"
-            android:hint="@string/weight" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/measurements_weight_edit_text"
+                style="@style/editTextNumbers"
+                android:hint="@string/weight"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <EditText
-            style="@style/editTextNumbers"
-            android:hint="@string/height" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/measurements_height_input"
+            android:layout_marginBottom="0dp"
+            style="@style/editTextInput">
 
-        <EditText
-            style="@style/editTextNumbers"
-            android:hint="@string/chest" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/measurements_height_edit_text"
+                style="@style/editTextNumbers"
+                android:hint="@string/height"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <EditText
-            style="@style/editTextNumbers"
-            android:hint="@string/shoulder" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/measurements_chest_input"
+            style="@style/editTextInput"
+            android:layout_marginBottom="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/measurements_chest_edit_text"
+                style="@style/editTextNumbers"
+                android:hint="@string/chest"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/measurements_shoulders_input"
+            style="@style/editTextInput"
+            android:layout_marginBottom="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/measurements_shoulders_edit_text"
+                style="@style/editTextNumbers"
+                android:hint="@string/shoulder"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
-                style="@style/editTextNumbers"
-                android:layout_marginEnd="5dp"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/measurements_left_arm_input"
                 android:layout_weight="1"
-                android:hint="@string/left_arm" />
+                style="@style/editTextInput"
+                android:layout_marginBottom="0dp">
 
-            <EditText
-                style="@style/editTextNumbers"
-                android:layout_marginStart="5dp"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/measurements_left_arm_edit_text"
+                    style="@style/editTextNumbers"
+                    android:layout_marginEnd="5dp"
+                    android:hint="@string/left_arm"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/measurements_right_arm_input"
                 android:layout_weight="1"
-                android:hint="@string/right_arm" />
+                style="@style/editTextInput"
+                android:layout_marginBottom="0dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/measurements_right_arm_edit_text"
+                    style="@style/editTextNumbers"
+                    android:layout_marginEnd="5dp"
+                    android:hint="@string/right_arm"/>
+            </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
-        <EditText
-            style="@style/editTextNumbers"
-            android:hint="@string/abdomen" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/measurements_abdomen_input"
+            style="@style/editTextInput"
+            android:layout_marginBottom="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/measurements_abdomen_edit_text"
+                style="@style/editTextNumbers"
+                android:hint="@string/abdomen"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
-                style="@style/editTextNumbers"
-                android:layout_marginEnd="5dp"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/measurements_left_thighs_input"
                 android:layout_weight="1"
-                android:hint="@string/left_thighs" />
+                style="@style/editTextInput"
+                android:layout_marginBottom="0dp">
 
-            <EditText
-                style="@style/editTextNumbers"
-                android:layout_marginStart="5dp"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/measurements_left_thighs_edit_text"
+                    style="@style/editTextNumbers"
+                    android:layout_marginEnd="5dp"
+                    android:hint="@string/left_thighs"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/measurements_right_thighs_input"
                 android:layout_weight="1"
-                android:hint="@string/right_thighs" />
+                style="@style/editTextInput"
+                android:layout_marginBottom="0dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/measurements_right_thighs_edit_text"
+                    style="@style/editTextNumbers"
+                    android:layout_marginEnd="5dp"
+                    android:hint="@string/right_thighs"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
 
@@ -101,32 +163,39 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
-                style="@style/editTextNumbers"
-                android:layout_marginEnd="5dp"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/measurements_left_calves_input"
                 android:layout_weight="1"
-                android:hint="@string/left_calves" />
+                style="@style/editTextInput"
+                android:layout_marginBottom="0dp">
 
-            <EditText
-                style="@style/editTextNumbers"
-                android:id="@+id/right_calves"
-                android:layout_marginStart="5dp"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/measurements_left_calves_edit_text"
+                    style="@style/editTextNumbers"
+                    android:layout_marginEnd="5dp"
+                    android:hint="@string/left_calves"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/measurements_right_calves_input"
                 android:layout_weight="1"
-                android:hint="@string/right_calves" />
+                style="@style/editTextInput"
+                android:layout_marginBottom="0dp">
 
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/measurements_right_caçves_edit_text"
+                    style="@style/editTextNumbers"
+                    android:layout_marginEnd="5dp"
+                    android:hint="@string/right_calves"/>
+            </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
-
-
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnInsertMeasurements"
+        android:id="@+id/measurements_add_btn_insert"
         style="@style/button_common"
         android:layout_margin="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ln_main"
         android:text="@string/insert" />
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
