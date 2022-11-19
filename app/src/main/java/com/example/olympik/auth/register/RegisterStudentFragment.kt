@@ -1,41 +1,32 @@
-package com.example.olympik.register.view
+package com.example.olympik.auth.register
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Patterns
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.olympik.R
-import com.example.olympik.common.base.DependencyInjector
 import com.example.olympik.common.util.TxtWatcher
-import com.example.olympik.register.RegisterStudent
-import com.example.olympik.register.presentation.RegisterStudentPresenter
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.fragment_register_student.*
 
-class   RegisterStudentFragment : Fragment(R.layout.fragment_register_student), RegisterStudent.View{
-    private var fragmentAttachListener : FragmentAttachListener? = null
+class   RegisterStudentFragment : Fragment(R.layout.fragment_register_student), RegisterStudent{
 
-    override lateinit var presenter: RegisterStudent.Presenter
+    private lateinit var auth : FirebaseAuth
+    private var fragmentAttachListener : FragmentAttachListener? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val repository = DependencyInjector.registerStudentRepository()
-        presenter = RegisterStudentPresenter(this, repository)
+        auth = Firebase.auth
 
-        register_student_btn_register.setOnClickListener {
-            presenter.create(
-                register_student_full_name.text.toString(),
-                register_student_spinner_sex.toString(),
-                register_student_birth_date.text.toString(),
-                register_student_cpf.text.toString(),
-                register_student_phone_number.text.toString(),
-                register_student_email.text.toString(),
-                register_student_password.text.toString(),
-                register_student_repassword.text.toString()
-            )
+        register_student_btn_register.setOnClickListener{
+            validateData()
         }
 
         register_student_full_name.addTextChangedListener(watcher)
@@ -89,7 +80,6 @@ class   RegisterStudentFragment : Fragment(R.layout.fragment_register_student), 
             fragmentAttachListener = context
         }
     }
-
     override fun showProgress(enabled: Boolean) {
         register_student_btn_register.showProgress(enabled)
     }
@@ -134,6 +124,93 @@ class   RegisterStudentFragment : Fragment(R.layout.fragment_register_student), 
         Toast.makeText(requireContext(), message, Toast.LENGTH_LONG).show()
     }
 
+    private fun validateData(){
+        val name = register_student_full_name.text.toString()
+        val sex = register_student_spinner_sex.toString()
+        val birthDate = register_student_birth_date.text.toString()
+        val cpf = register_student_cpf.text.toString()
+        val phoneNumber = register_student_phone_number.text.toString()
+        val email = register_student_email.text.toString()
+        val password = register_student_password.text.toString()
+        val confirmPass = register_student_repassword.text.toString()
+
+        val isNameValid = name.length >= 10
+        val isSexValid = sex != "Sexo"
+        val isBirthDateValid = birthDate.isNotEmpty()
+        val isCpfValid = cpf.length == 11
+        val isPhoneNumberValid = phoneNumber.length == 11
+        val isEmailValid = Patterns.EMAIL_ADDRESS.matcher(email).matches()
+        val isPasswordValid = password.length >=6
+        val isConfirmValid = password == confirmPass
+
+        if (!isNameValid){
+            displayNameFailure(R.string.invalid_name)
+        } else {
+            displayNameFailure(null)
+        }
+
+        if (!isSexValid){
+            displaySexFailure(R.string.invalid_sex)
+        } else {
+            displaySexFailure(null)
+        }
+
+        if (!isBirthDateValid){
+            displayBirthDateFailure(R.string.invalid_birth)
+        } else {
+            displayBirthDateFailure(null)
+        }
+
+        if (!isCpfValid){
+            displayCpfFailure(R.string.invalid_cpf)
+        } else {
+            displayCpfFailure(null)
+        }
+
+        if (!isPhoneNumberValid){
+            displayPhoneNumberFailure(R.string.invalid_phone)
+        } else {
+            displayPhoneNumberFailure(null)
+        }
+
+        if(!isEmailValid){
+            displayEmailFailure(R.string.invalid_email)
+        } else {
+            displayEmailFailure(null)
+        }
+
+        if (!isConfirmValid){
+            displayRePasswordFailure(R.string.invalid_confirm)
+        } else {
+            if (!isPasswordValid){
+               displayPasswordFailure(R.string.invalid_password)
+            } else {
+                displayPasswordFailure(null)
+            }
+        }
+
+        if (isNameValid && isSexValid && isBirthDateValid && isCpfValid && isPhoneNumberValid &&
+            isEmailValid && isPasswordValid && isConfirmValid){
+
+            showProgress(true)
+            createUser(email, password)
+        }
+    }
+
+    private fun createUser(email: String, password: String){
+        val email = register_student_email.text.toString()
+        val password = register_student_password.text.toString()
+        auth.createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener(requireActivity()) { task ->
+                if (task.isSuccessful) {
+                    onCreateSuccess()
+                } else {
+                    showProgress(false)
+                }
+            }
+
+    }
+
     private val watcher = TxtWatcher{
         register_student_btn_register.isEnabled = register_student_full_name.text.toString().isNotEmpty()
             //falta spinner
@@ -143,10 +220,5 @@ class   RegisterStudentFragment : Fragment(R.layout.fragment_register_student), 
             && register_student_email.text.toString().isNotEmpty()
             && register_student_password.text.toString().isNotEmpty()
             && register_student_repassword.text.toString().isNotEmpty()
-    }
-
-    override fun onDestroy() {
-        presenter.onDestroy()
-        super.onDestroy()
     }
 }

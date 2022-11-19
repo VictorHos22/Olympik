@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "996010613589",
+    "project_id": "olympik-f16d3",
+    "storage_bucket": "olympik-f16d3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:996010613589:android:4c74dda13f55812df3eddc",
+        "android_client_info": {
+          "package_name": "com.example.olympik"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "996010613589-p3ijuq8i1j70m6llfrlab7aro78nkhd0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.olympik",
+            "certificate_hash": "d6453bb22b5100ec019f8280aee113dd9671370a"
+          }
+        },
+        {
+          "client_id": "996010613589-g114rjdm9f2s1pj0fj20krt705id46je.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-FmnLbZlMetc2R08DXf8CRMeKDQKM-fM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "996010613589-g114rjdm9f2s1pj0fj20krt705id46je.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -89,12 +89,14 @@
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
-    <Button
+    <com.example.olympik.common.view.LoadingButton
         android:id="@+id/my_data_btn_update"
+        android:layout_width="300dp"
         style="@style/button_common"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ln"
-        android:text="@string/update"
+        app:text="@string/update"
         android:layout_margin="20dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

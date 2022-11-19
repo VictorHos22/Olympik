@@ -10,31 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Olympik">
         <activity
-            android:name=".register.view.RegisterActivity"
-            android:exported="false" />
-        <activity
-            android:name=".registerStudent.view.TesteEmail"
-            android:exported="false"></activity>
-        <activity
-            android:name=".splash.view.SplashActivity"
-            android:exported="false" />
-        <activity
-            android:name=".main.MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".FirstBodyMeasurementsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".registerStudent.view.RegisterStudentActivity"
-            android:exported="false" />
-        <activity
-            android:name=".register.view.RegisterAdmActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ChooseAccountActivity"
-            android:exported="false" />
-        <activity
-            android:name=".login.view.LoginActivity"
+            android:name="com.example.olympik.auth.AuthActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,6 +18,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".main.MainActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

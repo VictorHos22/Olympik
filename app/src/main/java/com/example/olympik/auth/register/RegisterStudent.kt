@@ -1,14 +1,6 @@
-package com.example.olympik.register
-
-import com.example.olympik.common.base.BasePresenter
-import com.example.olympik.common.base.BaseView
-import java.util.*
+package com.example.olympik.auth.register
 
 interface RegisterStudent {
-    interface Presenter: BasePresenter {
-        fun create(name: String, sex: String, birthDate: String, cpf: String, phoneNumber: String, email: String, password: String, confirmPass: String)
-    }
-    interface View : BaseView<Presenter> {
         fun showProgress(enabled : Boolean)
         fun displayNameFailure(nameError: Int?)
         fun displaySexFailure(sexError: Int?)
@@ -20,5 +12,5 @@ interface RegisterStudent {
         fun displayRePasswordFailure(rePasswordError: Int?)
         fun onCreateSuccess()
         fun onCreateFailure(message : String)
-    }
+
 }

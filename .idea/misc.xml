@@ -9,13 +9,14 @@
         <entry key="app/src/main/res/drawable/style_border.xml" value="0.3255" />
         <entry key="app/src/main/res/drawable/training_edit_text_style.xml" value="0.2035" />
         <entry key="app/src/main/res/drawable/training_view_style.xml" value="0.2035" />
+        <entry key="app/src/main/res/layout/activity_auth.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_cadastro_adm.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_cadastro_aluno.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/activity_cadastro_aluno2.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/activity_choose_account.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/activity_first_body_measurements.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_login_adm.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_login_aluno.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
@@ -27,6 +28,7 @@
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/activity_teste_email.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/button_loading.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/button_loading_common.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/edit_training_rv.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/fragment_adm_profile.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/fragment_adm_profile_student.xml" value="0.3229166666666667" />
@@ -39,6 +41,7 @@
         <entry key="app/src/main/res/layout/fragment_frequency.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/fragment_frequency_history.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/fragment_measurement.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/fragment_measurement_update.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_my_data.xml" value="0.3229166666666667" />
@@ -47,12 +50,14 @@
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_profile_adm.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/fragment_profile_change_password.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/fragment_profile_my_data.xml" value="0.2675925925925926" />
+        <entry key="app/src/main/res/layout/fragment_profile_my_data.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_register_adm.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_register_adm2.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/fragment_register_choose_account.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/fragment_register_student.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/fragment_register_student_first_measurements.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_search_student.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.30885416666666665" />
         <entry key="app/src/main/res/layout/fragment_training.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_training_edit_exercises.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/fragment_training_exercise_info.xml" value="0.3229166666666667" />

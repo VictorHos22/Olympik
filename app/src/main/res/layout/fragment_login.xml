@@ -9,7 +9,7 @@
     android:paddingTop="10dp"
     android:background="@color/white"
     android:orientation="vertical"
-    tools:context=".login.view.LoginActivity">
+    tools:context=".auth.login.LoginFragment">
 
     <ImageView
         android:id="@+id/imageView"

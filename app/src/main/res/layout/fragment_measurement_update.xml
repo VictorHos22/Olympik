@@ -191,11 +191,12 @@
         </LinearLayout>
     </LinearLayout>
 
-    <Button
+    <com.example.olympik.common.view.LoadingButton
         android:id="@+id/measurements_add_btn_insert"
-        style="@style/button_common"
-        android:layout_margin="20dp"
+        style="@style/button_loading"
+        android:layout_width="300dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ln_main"
-        android:text="@string/insert" />
+        app:text="@string/insert" />
 </androidx.constraintlayout.widget.ConstraintLayout>
