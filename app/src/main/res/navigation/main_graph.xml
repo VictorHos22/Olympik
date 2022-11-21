@@ -6,7 +6,7 @@
     app:startDestination="@id/splashFragment">
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.example.olympik.splash.view.SplashFragment"
+        android:name="com.example.olympik.splash.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action
@@ -48,6 +48,5 @@
     <fragment
         android:id="@+id/registerFirstMeasurementsFragment"
         android:name="com.example.olympik.auth.register.RegisterFirstMeasurementsFragment"
-        android:label="fragment_register_first_measurements"
-        tools:layout="@layout/fragment_register_first_measurements" />
+        android:label="RegisterFirstMeasurementsFragment" />
 </navigation>

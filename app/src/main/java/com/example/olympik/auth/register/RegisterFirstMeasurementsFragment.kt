@@ -14,7 +14,7 @@ class RegisterFirstMeasurementsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_register_first_measurements, container, false)
+        return inflater.inflate(R.layout.fragment_register_student_first_measurements, container, false)
     }
 
 }

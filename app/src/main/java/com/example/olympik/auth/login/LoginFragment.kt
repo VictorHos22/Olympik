@@ -1,5 +1,6 @@
 package com.example.olympik.auth.login
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
@@ -9,10 +10,13 @@ import androidx.fragment.app.Fragment
 import com.example.olympik.main.MainActivity
 import com.example.olympik.R
 import com.example.olympik.auth.AuthActivity
+import com.example.olympik.auth.FragmentAttachListener
 import com.example.olympik.common.util.TxtWatcher
 import kotlinx.android.synthetic.main.fragment_login.*
 
 class LoginFragment : Fragment(), Login {
+
+    private var fragmentAttachListener : FragmentAttachListener? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -30,6 +34,13 @@ class LoginFragment : Fragment(), Login {
         }
         login_txt_click_to_register.setOnClickListener{
             goToChooseAccount()
+        }
+    }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        if (context is FragmentAttachListener){
+            fragmentAttachListener = context
         }
     }
 
