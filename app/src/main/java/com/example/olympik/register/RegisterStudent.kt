@@ -1,4 +1,4 @@
-package com.example.olympik.auth.register
+package com.example.olympik.register
 
 interface RegisterStudent {
         fun showProgress(enabled : Boolean)

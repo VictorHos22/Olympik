@@ -1,4 +1,4 @@
-package com.example.olympik.auth.register
+package com.example.olympik.register
 
 import android.content.Context
 import android.os.Bundle
@@ -9,7 +9,6 @@ import android.widget.Spinner
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.olympik.R
-import com.example.olympik.auth.FragmentAttachListener
 import com.example.olympik.common.util.TxtWatcher
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth

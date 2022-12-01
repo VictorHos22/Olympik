@@ -1,25 +1,23 @@
-package com.example.olympik.auth.login
+package com.example.olympik.login
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.util.Patterns
-import android.view.View
 import android.widget.Toast
-import androidx.fragment.app.Fragment
+import androidx.appcompat.app.AppCompatActivity
 import com.example.olympik.main.MainActivity
 import com.example.olympik.R
-import com.example.olympik.auth.AuthActivity
-import com.example.olympik.auth.FragmentAttachListener
 import com.example.olympik.common.util.TxtWatcher
-import kotlinx.android.synthetic.main.fragment_login.*
+import com.example.olympik.register.RegisterActivity
+import kotlinx.android.synthetic.main.activity_login.*
 
-class LoginFragment : Fragment(), Login {
+class LoginActivity : AppCompatActivity(), Login {
 
-    private var fragmentAttachListener : FragmentAttachListener? = null
+    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
+        super.onCreate(savedInstanceState, persistentState)
+        setContentView(R.layout.activity_login)
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
         login_edit_email.addTextChangedListener(watcher)
         login_edit_email.addTextChangedListener(TxtWatcher{
             displayEmailFailure(null)
@@ -30,23 +28,14 @@ class LoginFragment : Fragment(), Login {
         })
 
         login_btn_enter.setOnClickListener{
-            TODO()
+            validateLogin()
         }
         login_txt_click_to_register.setOnClickListener{
             goToChooseAccount()
         }
     }
-
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        if (context is FragmentAttachListener){
-            fragmentAttachListener = context
-        }
-    }
-
     private fun goToChooseAccount(){
-        val intent = Intent(activity, AuthActivity::class.java)
-        activity?.startActivity(intent)
+        startActivity(Intent(this, RegisterActivity::class.java))
     }
 
     private val watcher = TxtWatcher{
@@ -67,13 +56,13 @@ class LoginFragment : Fragment(), Login {
     }
 
     override fun onUserAuthenticated() {
-        val intent = Intent (activity, MainActivity::class.java)
+        val intent = Intent (this, MainActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-        activity?.startActivity(intent)
+        startActivity(intent)
     }
 
     override fun onUserUnauthorized(message: String) {
-        Toast.makeText(requireContext(), message, Toast.LENGTH_LONG).show()
+        Toast.makeText(this, message, Toast.LENGTH_LONG).show()
     }
     private fun validateLogin(){
         val email = login_edit_email.text.toString()
@@ -96,7 +85,9 @@ class LoginFragment : Fragment(), Login {
 
         if (isEmailValid && isPasswordValid){
             showProgress(true)
-
+            onUserAuthenticated()
+        } else{
+            onUserUnauthorized("Login ou senha inválido")
         }
     }
 }

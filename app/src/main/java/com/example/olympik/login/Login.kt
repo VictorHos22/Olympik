@@ -1,7 +1,4 @@
-package com.example.olympik.auth.login
-
-import com.example.olympik.common.base.BasePresenter
-import com.example.olympik.common.base.BaseView
+package com.example.olympik.login
 
 interface Login {
         fun showProgress(enabled : Boolean)

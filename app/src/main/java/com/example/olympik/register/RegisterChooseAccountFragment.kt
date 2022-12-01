@@ -1,4 +1,4 @@
-package com.example.olympik.auth.register
+package com.example.olympik.register
 
 import androidx.fragment.app.Fragment
 import com.example.olympik.R

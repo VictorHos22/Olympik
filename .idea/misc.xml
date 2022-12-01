@@ -41,8 +41,8 @@
         <entry key="app/src/main/res/layout/fragment_frequency.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/fragment_frequency_history.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.3229166666666667" />
-        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.3229166666666667" />
-        <entry key="app/src/main/res/layout/fragment_measurement.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_measurement.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_measurement_update.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_my_data.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/fragment_new_training.xml" value="0.33" />
@@ -56,16 +56,16 @@
         <entry key="app/src/main/res/layout/fragment_register_adm2.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/fragment_register_choose_account.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/fragment_register_first_measurements.xml" value="0.3229166666666667" />
-        <entry key="app/src/main/res/layout/fragment_register_student.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/fragment_register_student.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_register_student_first_measurements.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_search_student.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.30885416666666665" />
         <entry key="app/src/main/res/layout/fragment_training.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/fragment_training_edit_exercises.xml" value="0.3229166666666667" />
-        <entry key="app/src/main/res/layout/fragment_training_exercise_info.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/fragment_training_edit_exercises.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_training_exercise_info.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_training_history.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/fragment_training_new_workout.xml" value="0.3229166666666667" />
-        <entry key="app/src/main/res/layout/fragment_training_performing_workout.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/fragment_training_performing_workout.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_training_workouts.xml" value="0.2675925925925926" />
         <entry key="app/src/main/res/layout/fragment_trainings.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/fragment_update_measurements.xml" value="0.3229166666666667" />

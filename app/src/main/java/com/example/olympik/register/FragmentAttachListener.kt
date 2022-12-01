@@ -1,4 +1,4 @@
-package com.example.olympik.auth
+package com.example.olympik.register
 
 interface FragmentAttachListener {
     fun goToRegisterStudent()

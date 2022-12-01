@@ -15,16 +15,16 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.olympik.auth.login.LoginFragment"
+        android:name="com.example.olympik.login.LoginActivity"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        tools:layout="@layout/activity_login" >
         <action
             android:id="@+id/action_loginFragment_to_registerChooseAccountFragment"
             app:destination="@id/registerChooseAccountFragment" />
     </fragment>
     <fragment
         android:id="@+id/registerChooseAccountFragment"
-        android:name="com.example.olympik.auth.register.RegisterChooseAccountFragment"
+        android:name="com.example.olympik.register.RegisterChooseAccountFragment"
         android:label="RegisterChooseAccountFragment" >
         <action
             android:id="@+id/action_registerChooseAccountFragment_to_registerStudentFragment"
@@ -35,7 +35,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerStudentFragment"
-        android:name="com.example.olympik.auth.register.RegisterStudentFragment"
+        android:name="com.example.olympik.register.RegisterStudentFragment"
         android:label="RegisterStudentFragment" >
         <action
             android:id="@+id/action_registerStudentFragment_to_registerFirstMeasurementsFragment"
@@ -43,10 +43,10 @@
     </fragment>
     <fragment
         android:id="@+id/registerAdmFragment"
-        android:name="com.example.olympik.auth.register.RegisterAdmFragment"
+        android:name="com.example.olympik.register.RegisterAdmFragment"
         android:label="RegisterAdmFragment" />
     <fragment
         android:id="@+id/registerFirstMeasurementsFragment"
-        android:name="com.example.olympik.auth.register.RegisterFirstMeasurementsFragment"
+        android:name="com.example.olympik.register.RegisterFirstMeasurementsFragment"
         android:label="RegisterFirstMeasurementsFragment" />
 </navigation>

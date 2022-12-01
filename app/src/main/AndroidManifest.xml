@@ -10,7 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Olympik">
         <activity
-            android:name="com.example.olympik.auth.AuthActivity"
+            android:name=".register.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main.MainActivity"
+            android:exported="false">
+
+        </activity>
+
+        <activity android:name=".login.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,9 +26,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".main.MainActivity"
-            android:exported="false" />
     </application>
 
 </manifest>
