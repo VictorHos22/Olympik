@@ -28,7 +28,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         xmlns:tools="http://schemas.android.com/tools"
-        tools:listitem="@layout/measurement_main_item_rv"/>
+        tools:listitem="@layout/item_measurement_rv"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/measurements_btn_add"

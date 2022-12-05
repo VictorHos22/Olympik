@@ -51,7 +51,7 @@
         app:layout_constraintTop_toBottomOf="@id/view_line2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:listitem="@layout/exercises_rv" />
+        tools:listitem="@layout/item_exercises_rv" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/training_edit_add_btn_fab"

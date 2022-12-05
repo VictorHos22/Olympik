@@ -6,6 +6,7 @@
         <entry key="app/src/main/res/drawable/ic_circle.xml" value="0.2035" />
         <entry key="app/src/main/res/drawable/ic_play.xml" value="0.2035" />
         <entry key="app/src/main/res/drawable/ic_play_circle.xml" value="0.2035" />
+        <entry key="app/src/main/res/drawable/splash_bg.xml" value="0.2015" />
         <entry key="app/src/main/res/drawable/style_border.xml" value="0.3255" />
         <entry key="app/src/main/res/drawable/training_edit_text_style.xml" value="0.2035" />
         <entry key="app/src/main/res/drawable/training_view_style.xml" value="0.2035" />
@@ -61,7 +62,7 @@
         <entry key="app/src/main/res/layout/fragment_search_student.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.30885416666666665" />
         <entry key="app/src/main/res/layout/fragment_training.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/fragment_training_edit_exercises.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_training_edit_exercises.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_training_exercise_info.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_training_history.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/fragment_training_new_workout.xml" value="0.3229166666666667" />
@@ -70,7 +71,9 @@
         <entry key="app/src/main/res/layout/fragment_trainings.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/fragment_update_measurements.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/frequency_history_rv.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/item_training_rv.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/loading_button.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/main_item_measurement_rv.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/measurement_main_item_rv.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/performing_exercise_rv.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/search_student_rv.xml" value="0.3229166666666667" />

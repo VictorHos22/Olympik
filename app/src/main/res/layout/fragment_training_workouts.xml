@@ -27,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="@id/view_line"
-        tools:listitem="@layout/training_main_item_rv"/>
+        tools:listitem="@layout/item_training_rv"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/training_fab_add"
