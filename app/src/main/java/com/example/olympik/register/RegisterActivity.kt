@@ -10,7 +10,6 @@ import com.example.olympik.main.MainActivity
 
 class RegisterActivity : AppCompatActivity(), FragmentAttachListener {
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
@@ -18,7 +17,6 @@ class RegisterActivity : AppCompatActivity(), FragmentAttachListener {
         val fragment = RegisterChooseAccountFragment()
         replaceFragment(fragment)
     }
-
 
     override fun goToRegisterStudent() {
         val fragment = RegisterStudentFragment()

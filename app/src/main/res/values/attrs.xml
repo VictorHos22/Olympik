@@ -8,4 +8,11 @@
         <item>Masculino</item>
         <item>Feminino</item>
     </string-array>
+    <string-array name="name_training_array">
+        <item>Peito e tríceps</item>
+        <item>Costas e tríceps</item>
+        <item>Costas e bíceps</item>
+        <item>Peito e bíceps</item>
+        <item>Pernas e ombros</item>
+    </string-array>
 </resources>

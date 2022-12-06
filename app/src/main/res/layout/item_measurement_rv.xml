@@ -31,6 +31,7 @@
         app:layout_constraintTop_toBottomOf="@id/txt_small_description"
         app:layout_constraintStart_toStartOf="parent"/>
     <Button
+        android:id="@+id/measurement_btn_access"
         style="@style/button_common"
         android:text="@string/access"
         app:layout_constraintEnd_toEndOf="parent"

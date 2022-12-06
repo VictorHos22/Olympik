@@ -36,25 +36,28 @@ selecionar exercicios terá um spinner-->
             style="@style/textView"
             android:text="@string/name_training" />
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/training_add_new_name_input"
-            style="@style/editTextInput">
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/training_add_new_name_edit_text"
-                style="@style/editText"/>
+            android:id="@+id/new_training_edit_input_name"
+            style="@style/editTextInput"
+            android:layout_marginBottom="0dp">
+
+        <Spinner
+            android:layout_marginBottom="0dp"
+            android:id="@+id/new_training_spinner_name"
+            style="@style/spinner" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             style="@style/textView"
             android:text="@string/select_exercises" />
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/training_spinner_select_exercices_input"
-            style="@style/editTextInput">
+            android:id="@+id/new_training_edit_input_exercise_name"
+            style="@style/editTextInput"
+            android:layout_marginBottom="0dp">
+
             <Spinner
-                android:id="@+id/training_spinner_select_exercices"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginBottom="20dp"
-                android:background="@drawable/training_view_style" />
+                android:layout_marginBottom="0dp"
+                android:id="@+id/new_training_spinner_exercise_name"
+                style="@style/spinner" />
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 

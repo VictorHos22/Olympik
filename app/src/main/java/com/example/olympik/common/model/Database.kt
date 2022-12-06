@@ -3,9 +3,7 @@ package com.example.olympik.common.model
 import java.util.*
 
 object Database {
-    private val usersAuth = hashSetOf<UserAuth>()
-    val userMeasurements = hashSetOf<UserMeasurements>()
-
+    val usersAuth = hashSetOf<UserAuth>()
 
     var sessionAuth: UserAuth? = null
     init {

@@ -10,11 +10,12 @@ import com.example.olympik.discovery.view.DiscoveryFragment
 import com.example.olympik.frequency.view.FrequencyFragment
 import com.example.olympik.measurement.view.MeasurementFragment
 import com.example.olympik.profile.view.ProfileFragment
+import com.example.olympik.register.TrainingNewWorkoutFragment
 import com.example.olympik.training.view.TrainingFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener{
+class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener, MainFragmentAttachListener{
 
     private lateinit var discoveryFragment: Fragment
     private lateinit var measurementsFragment: Fragment
@@ -22,6 +23,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     private lateinit var frequencyFragment: Fragment
     private lateinit var profileFragment: Fragment
     private var currentFragment: Fragment? = null
+    private lateinit var fragment: Fragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,7 +31,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
 
         discoveryFragment = DiscoveryFragment()
         measurementsFragment = MeasurementFragment()
-        trainingFragment = TrainingFragment()
+        trainingFragment = TrainingWorkoutsFragment()
         frequencyFragment = FrequencyFragment()
         profileFragment = ProfileFragment()
 
@@ -65,6 +67,14 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
             replaceFragment(R.id.main_fragment, it)
         }
         return true
+    }
+
+    override fun goToCreateNewTraining() {
+        fragment = TrainingNewWorkoutFragment()
+        replaceFragment(fragment)
+    }
+    private fun replaceFragment(fragment: Fragment) {
+        replaceFragment(R.id.main_fragment, fragment)
     }
 
 }
